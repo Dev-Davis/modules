@@ -1,1 +1,7 @@
-console.log('Almost Amazon');
+
+import store from './components/store.js';
+const init = () => {
+    store.makeStore();
+};
+
+init();
