@@ -12,12 +12,15 @@ const addToCartEvent = (e) => {
 
 const makeStore = () => {
     const bookInfo = book.getBook();
-    let domString = `<h2>Our Only Book!</h2>`;
-    domString += `<h3>${bookInfo.price}</h3>`;
+    let domString = '';
+    domString += `<h4 class="text-center">Our Only Book!</h4>`;
     domString += `<img class="shadesOfChicken" src="${bookInfo.image}" alt="50 shades of chicken book cover"/>`;
-    // domString += `<br><br>`
+    domString += '<div class="book-info">';
+    domString += `<p class=" book-name col-12"><h6>${bookInfo.title}</h6></p>`;
+    domString += `<p class=" price-name col-12">Price: <h6>${bookInfo.price}</h6></p>`;
+    domString += '</div>';
     domString += `<button id="cartBtn" class="btn btn-primary" class="addBtn">Add To Cart</button>`;
-    util.printToDom('store-container', domString);
+    util.printToDom('store', domString);
     document.getElementById('cartBtn').addEventListener('click', addToCartEvent);
 };
 

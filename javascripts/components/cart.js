@@ -19,21 +19,21 @@ const buyEvent = (e) => {
 
 const cartToDom = () => {
     const myCart = getCart();
-    let domString = '<div class="row">';
-  domString += '<h2>Cart:</h2>';
-  domString += '<button id="purchase-btn" class="btn btn-secondary">Purchase</button>'
-  domString += '</div><div class="row d-flex flex-wrap">';
+    let domString = '<div>';
+  domString += '<h4>Cart:</h4>';
+  domString += '<div>';
   myCart.forEach((book) => {
-    domString += `<div class="card col-2">`;
-    domString += `  <img src=${book.image} class="card-img-top" alt="...">`;
+    domString += `<div class="card col-4 text-center">`;
+    domString += `  <img src=${book.image} class="shadesOfChicken-cart" alt="...">`;
     domString += `  <div class="card-body">`;
     domString += `    <h5 class="card-title">${book.title}</h5>`;
     domString += `    <p class="card-text">${book.price}</p>`;
     domString += `  </div>`;
+    domString += '<button id="purchase-btn" class="btn btn-secondary">Purchase</button>'
     domString += `</div>`;
   });
   domString += `</div>`;
-  util.printToDom('cart-container', domString);
+  util.printToDom('cart', domString);
   document.getElementById('purchase-btn').addEventListener('click', buyEvent);
 };
 
