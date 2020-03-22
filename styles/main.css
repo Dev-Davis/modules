@@ -1,12 +1,47 @@
-body { 
+body 
+{ 
     background-color: pink;
 }
 
-.shadesOfChicken {
+.shadesOfChicken 
+{
     height: 250px;
-    /* width: 200px; */
+    /* padding: 1rem; */
 }
 
-.btn .btn-btn .addBtn {
+.shadesOfChicken-cart 
+{
+    height: 250px;
+    padding-bottom: 11px;
+}
+
+.btn .btn-btn .addBtn 
+{
     margin: auto;
+}
+
+.card-body,
+.price-name
+{
+    padding: 0;
+    margin: 0;
+}
+
+#purchase-btn,
+#cartBtn
+{
+    padding: 5px;
+}
+
+.card 
+{
+    padding: 1rem;
+    height: 395px;
+}
+
+#store,
+#cart
+{
+    border: 1px solid rgb(179, 179, 179);
+    padding: 1rem;
 }
